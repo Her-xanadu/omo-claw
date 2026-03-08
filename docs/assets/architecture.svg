@@ -1,47 +1,44 @@
-<svg width="1280" height="760" viewBox="0 0 1280 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1280" height="760" viewBox="0 0 1280 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">omo claw architecture</title>
+  <desc id="desc">Architecture diagram showing OpenClaw, the omo claw bridge core, and the isolated OpenCode plus OmO runtime.</desc>
+
   <rect width="1280" height="760" rx="28" fill="#0F172A"/>
-  <text x="640" y="76" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" text-anchor="middle">omo claw architecture</text>
-  <text x="640" y="114" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">OpenClaw entrypoint → bridge core → isolated OpenCode + OmO runtime</text>
+  <text x="640" y="78" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" text-anchor="middle">omo claw architecture</text>
+  <text x="640" y="116" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">OpenClaw entrypoint → bridge core → isolated OpenCode + OmO runtime</text>
 
-  <rect x="74" y="174" width="332" height="474" rx="28" fill="#111827" stroke="#38BDF8"/>
-  <text x="240" y="226" fill="#7DD3FC" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" text-anchor="middle">OpenClaw</text>
-  <text x="240" y="266" fill="#E5E7EB" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">Plugin host & user-facing entry</text>
-  <g fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">
-    <text x="112" y="336">• context-engine registration</text>
-    <text x="112" y="380">• gateway method: omo-claw.status</text>
-    <text x="112" y="424">• slash command: omo_claw_status</text>
-    <text x="112" y="468">• thread binding & session view</text>
-    <text x="112" y="512">• plugin workspace integration</text>
-  </g>
+  <rect x="72" y="170" width="336" height="480" rx="28" fill="#111827" stroke="#38BDF8" stroke-width="2"/>
+  <text x="240" y="228" fill="#7DD3FC" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" text-anchor="middle">OpenClaw</text>
+  <text x="240" y="268" fill="#E5E7EB" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">Plugin host & user entry</text>
+  <text x="112" y="338" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• context-engine registration</text>
+  <text x="112" y="382" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• gateway method: omo-claw.status</text>
+  <text x="112" y="426" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• slash command: omo_claw_status</text>
+  <text x="112" y="470" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• thread binding & session status</text>
+  <text x="112" y="514" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• plugin workspace integration</text>
 
-  <rect x="474" y="144" width="332" height="534" rx="28" fill="#111827" stroke="#A78BFA"/>
-  <text x="640" y="196" fill="#DDD6FE" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" text-anchor="middle">omo claw bridge core</text>
-  <text x="640" y="236" fill="#E5E7EB" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">Routing, permissions, summaries, replay</text>
-  <g fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">
-    <text x="512" y="302">• RuntimeManager / BridgeSdkClient</text>
-    <text x="512" y="346">• RouteEngine / AgentAdapter</text>
-    <text x="512" y="390">• PermissionBridge / PolicyEnforcer</text>
-    <text x="512" y="434">• EventBridge / EventReducer</text>
-    <text x="512" y="478">• SummaryCache / TodoSync / Replay</text>
-    <text x="512" y="522">• CapabilityService / mode switching</text>
-    <text x="512" y="566">• Definition compiler & manifests</text>
-  </g>
+  <rect x="472" y="140" width="336" height="540" rx="28" fill="#111827" stroke="#A78BFA" stroke-width="2"/>
+  <text x="640" y="198" fill="#DDD6FE" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" text-anchor="middle">omo claw bridge core</text>
+  <text x="640" y="238" fill="#E5E7EB" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">Routing, permissions, summaries, replay</text>
+  <text x="510" y="304" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• RuntimeManager / BridgeSdkClient</text>
+  <text x="510" y="348" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• RouteEngine / AgentAdapter</text>
+  <text x="510" y="392" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• PermissionBridge / PolicyEnforcer</text>
+  <text x="510" y="436" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• EventBridge / EventReducer</text>
+  <text x="510" y="480" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• SummaryCache / TodoSync / Replay</text>
+  <text x="510" y="524" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• CapabilityService / mode switching</text>
+  <text x="510" y="568" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• Definition compiler & generated manifests</text>
 
-  <rect x="874" y="174" width="332" height="474" rx="28" fill="#111827" stroke="#60A5FA"/>
-  <text x="1040" y="226" fill="#BFDBFE" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" text-anchor="middle">Headless OpenCode + OmO</text>
-  <text x="1040" y="266" fill="#E5E7EB" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">Isolated execution runtime</text>
-  <g fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">
-    <text x="912" y="336">• opencode serve :19222</text>
-    <text x="912" y="380">• XDG-isolated config/data/state</text>
-    <text x="912" y="424">• OmO agents and virtual routing</text>
-    <text x="912" y="468">• Basic Auth and permission reply</text>
-    <text x="912" y="512">• SSE events, compaction, todo</text>
-  </g>
+  <rect x="872" y="170" width="336" height="480" rx="28" fill="#111827" stroke="#60A5FA" stroke-width="2"/>
+  <text x="1040" y="228" fill="#BFDBFE" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" text-anchor="middle">Headless OpenCode + OmO</text>
+  <text x="1040" y="268" fill="#E5E7EB" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">Isolated execution runtime</text>
+  <text x="912" y="338" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• opencode serve :19222</text>
+  <text x="912" y="382" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• XDG-isolated config / data / state</text>
+  <text x="912" y="426" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• OmO agents & virtual routing</text>
+  <text x="912" y="470" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• Basic Auth & permission replies</text>
+  <text x="912" y="514" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• SSE events, compaction, todo flow</text>
 
-  <path d="M406 410H474" stroke="#38BDF8" stroke-width="6" stroke-linecap="round"/>
-  <path d="M806 410H874" stroke="#A78BFA" stroke-width="6" stroke-linecap="round"/>
-  <circle cx="440" cy="410" r="9" fill="#38BDF8"/>
-  <circle cx="840" cy="410" r="9" fill="#A78BFA"/>
+  <line x1="408" y1="412" x2="472" y2="412" stroke="#38BDF8" stroke-width="6" stroke-linecap="round"/>
+  <line x1="808" y1="412" x2="872" y2="412" stroke="#A78BFA" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="440" cy="412" r="9" fill="#38BDF8"/>
+  <circle cx="840" cy="412" r="9" fill="#A78BFA"/>
 
   <text x="640" y="718" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="middle">Designed for clone → setup → plugin registration → isolated runtime verification</text>
 </svg>

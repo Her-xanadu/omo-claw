@@ -1,56 +1,48 @@
-<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1280" height="640" viewBox="0 0 1280 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">omo claw banner</title>
+  <desc id="desc">OpenClaw plugin, SDK-only bridge, headless runtime banner artwork for the omo claw project.</desc>
+
   <defs>
-    <linearGradient id="bg" x1="120" y1="80" x2="1120" y2="560" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0F172A"/>
-      <stop offset="0.45" stop-color="#111827"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="640" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#081226"/>
+      <stop offset="0.5" stop-color="#111827"/>
       <stop offset="1" stop-color="#1D4ED8"/>
     </linearGradient>
-    <linearGradient id="accent" x1="230" y1="126" x2="1010" y2="530" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#38BDF8" stop-opacity="0.35"/>
-      <stop offset="1" stop-color="#A78BFA" stop-opacity="0.18"/>
+    <linearGradient id="panel" x1="120" y1="120" x2="1120" y2="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1E3A5F" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#3B4FCC" stop-opacity="0.92"/>
     </linearGradient>
-    <filter id="blur" x="120" y="70" width="1040" height="500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="40"/>
-    </filter>
   </defs>
 
-  <rect width="1280" height="640" rx="32" fill="url(#bg)"/>
-  <g filter="url(#blur)">
-    <ellipse cx="330" cy="180" rx="210" ry="120" fill="#38BDF8" fill-opacity="0.25"/>
-    <ellipse cx="980" cy="500" rx="240" ry="130" fill="#A78BFA" fill-opacity="0.18"/>
-  </g>
-  <rect x="104" y="96" width="1072" height="448" rx="28" fill="url(#accent)" stroke="rgba(255,255,255,0.12)"/>
+  <rect width="1280" height="640" rx="30" fill="url(#bg)"/>
+  <circle cx="240" cy="180" r="150" fill="#38BDF8" fill-opacity="0.12"/>
+  <circle cx="1080" cy="510" r="180" fill="#A78BFA" fill-opacity="0.12"/>
+  <rect x="110" y="110" width="1060" height="420" rx="28" fill="url(#panel)" stroke="#FFFFFF" stroke-opacity="0.12"/>
 
-  <g opacity="0.95">
-    <rect x="170" y="150" width="158" height="42" rx="21" fill="#0B1220" stroke="#38BDF8"/>
-    <text x="249" y="177" fill="#BAE6FD" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">OpenClaw Plugin</text>
+  <rect x="170" y="150" width="180" height="44" rx="22" fill="#0B1220" stroke="#38BDF8"/>
+  <text x="260" y="178" fill="#BAE6FD" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">OpenClaw Plugin</text>
 
-    <rect x="362" y="150" width="158" height="42" rx="21" fill="#0B1220" stroke="#A78BFA"/>
-    <text x="441" y="177" fill="#E9D5FF" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">SDK-only Bridge</text>
+  <rect x="372" y="150" width="184" height="44" rx="22" fill="#0B1220" stroke="#C084FC"/>
+  <text x="464" y="178" fill="#E9D5FF" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">SDK-only Bridge</text>
 
-    <rect x="554" y="150" width="174" height="42" rx="21" fill="#0B1220" stroke="#60A5FA"/>
-    <text x="641" y="177" fill="#DBEAFE" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">Headless Runtime</text>
-  </g>
+  <rect x="578" y="150" width="200" height="44" rx="22" fill="#0B1220" stroke="#60A5FA"/>
+  <text x="678" y="178" fill="#DBEAFE" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">Headless Runtime</text>
 
-  <text x="168" y="290" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="88" font-weight="700">omo claw</text>
-  <text x="170" y="344" fill="#BFDBFE" font-family="Arial, Helvetica, sans-serif" font-size="28">An elegant OpenClaw context-engine bridge for OpenCode + OmO</text>
-  <text x="170" y="392" fill="#D1D5DB" font-family="Arial, Helvetica, sans-serif" font-size="24">Isolated runtime • agent orchestration • permission flow • event replay • compatibility control</text>
+  <text x="170" y="304" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="96" font-weight="700">omo claw</text>
+  <text x="170" y="360" fill="#C7D2FE" font-family="Arial, Helvetica, sans-serif" font-size="28">Elegant OpenClaw ↔ OpenCode bridge with an isolated OmO runtime</text>
+  <text x="170" y="414" fill="#E5E7EB" font-family="Arial, Helvetica, sans-serif" font-size="22">Runtime isolation • agent orchestration • permission flow • event replay • compatibility control</text>
 
-  <g>
-    <rect x="170" y="448" width="238" height="58" rx="16" fill="#2563EB"/>
-    <text x="289" y="484" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle">clone → setup → run</text>
+  <rect x="170" y="458" width="266" height="62" rx="18" fill="#2563EB"/>
+  <text x="303" y="497" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle">clone → setup → run</text>
 
-    <rect x="430" y="448" width="270" height="58" rx="16" fill="#111827" stroke="#60A5FA"/>
-    <text x="565" y="484" fill="#E5E7EB" font-family="Arial, Helvetica, sans-serif" font-size="24" text-anchor="middle">OpenClaw · OpenCode · OmO</text>
-  </g>
+  <rect x="462" y="458" width="320" height="62" rx="18" fill="#0B1220" stroke="#60A5FA"/>
+  <text x="622" y="497" fill="#E5E7EB" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">OpenClaw · OpenCode · OmO</text>
 
-  <g opacity="0.85">
-    <rect x="876" y="182" width="210" height="92" rx="20" fill="#0F172A" stroke="#38BDF8"/>
-    <text x="981" y="220" fill="#BAE6FD" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Session Graph</text>
-    <text x="981" y="252" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="middle">thread → root session</text>
+  <rect x="884" y="214" width="232" height="102" rx="22" fill="#0F172A" stroke="#38BDF8"/>
+  <text x="1000" y="256" fill="#BFDBFE" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle">Session Graph</text>
+  <text x="1000" y="292" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="middle">thread → root session</text>
 
-    <rect x="920" y="300" width="210" height="92" rx="20" fill="#0F172A" stroke="#A78BFA"/>
-    <text x="1025" y="338" fill="#E9D5FF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Event Bridge</text>
-    <text x="1025" y="370" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="middle">summary · todo · replay</text>
-  </g>
+  <rect x="884" y="352" width="232" height="102" rx="22" fill="#0F172A" stroke="#A78BFA"/>
+  <text x="1000" y="394" fill="#E9D5FF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle">Event Bridge</text>
+  <text x="1000" y="430" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="middle">summary · todo · replay</text>
 </svg>
