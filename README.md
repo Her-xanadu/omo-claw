@@ -25,11 +25,22 @@
 3. Configure the context-engine slot to use plugin id `omo-claw`.
 4. Start the isolated runtime with `integration/bridge-runtime/bridge-launcher.sh`.
 
+## Quick start
+
+```bash
+git clone https://github.com/Her-xanadu/omo-claw.git
+cd omo-claw
+./scripts/setup-local.sh
+./integration/bridge-runtime/bridge-launcher.sh
+./tests/live/runtime-health.smoke.sh
+```
+
+If you are installing into OpenClaw directly, place this repo in your plugin workspace and point OpenClaw at `openclaw.plugin.json` with plugin id `omo-claw`.
+
 ## Local development
 
 ```bash
-bun install
-bun run compile:definitions
+./scripts/setup-local.sh
 bun test
 bun run typecheck
 ./tests/live/runtime-health.smoke.sh
