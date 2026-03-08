@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "contract": "todo-semantics",
+  "version": 1,
+  "direction": "omo-to-openclaw",
+  "sdkCapabilities": {
+    "readEndpoint": "/session/{sessionID}/todo",
+    "event": "todo.updated",
+    "writeEndpoint": null,
+    "setTodoApiAvailable": false
+  },
+  "bridgeRules": {
+    "syncMode": "single-direction",
+    "authoritativeSource": "headless-opencode-session",
+    "openclawBehavior": "display-and-cache-only",
+    "forbiddenCalls": [
+      "session.setTodo",
+      "session.todo.update",
+      "todo.write"
+    ]
+  },
+  "evidence": {
+    "sdkTypes": "@opencode-ai/sdk/dist/v2/gen/types.gen.d.ts",
+    "sdkClient": "@opencode-ai/sdk/dist/v2/gen/sdk.gen.d.ts"
+  }
+}

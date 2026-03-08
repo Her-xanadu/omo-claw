@@ -1,0 +1,34 @@
+{
+  "capturedAt": "2026-03-08T12:49:28.921Z",
+  "sourceOfTruth": [
+    ".sisyphus/plans/openclaw-omo-sdk-bridge-plan.md",
+    "oh-my-opencode/src/agents"
+  ],
+  "builtinAgents": [
+    "sisyphus",
+    "atlas",
+    "oracle",
+    "prometheus",
+    "explore",
+    "metis",
+    "momus",
+    "librarian",
+    "sisyphus-junior"
+  ],
+  "virtualBridgeAgents": [
+    {
+      "name": "artemis",
+      "resolvedTo": "explore",
+      "skills": ["browser-automation"]
+    },
+    {
+      "name": "cynthia",
+      "resolvedTo": "oracle",
+      "skills": ["deep-learning"]
+    }
+  ],
+  "notes": [
+    "artemis and cynthia are bridge-level virtual agents, not OmO builtin entities",
+    "route decisions must preserve builtin slugs for actual SDK agent calls"
+  ]
+}

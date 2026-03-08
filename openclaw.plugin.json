@@ -1,0 +1,29 @@
+{
+  "id": "omo-claw",
+  "name": "omo claw",
+  "kind": "context-engine",
+  "entry": "./src/openclaw-bridge-plugin.ts",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "serverBaseUrl": {
+        "type": "string",
+        "default": "http://127.0.0.1:19222"
+      },
+      "permissionFlow": {
+        "type": "string",
+        "enum": ["auto-approve", "prompt-user", "deny-all"],
+        "default": "prompt-user"
+      }
+    }
+  },
+  "uiHints": {
+    "serverBaseUrl": {
+      "label": "Bridge Server Base URL"
+    },
+    "permissionFlow": {
+      "label": "Permission Flow"
+    }
+  }
+}

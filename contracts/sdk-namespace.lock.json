@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "contract": "sdk-namespace-lock",
+  "version": 1,
+  "lockedAt": "2026-03-08T12:49:28.921Z",
+  "namespace": "v2",
+  "sdkPackage": {
+    "name": "@opencode-ai/sdk",
+    "version": "1.2.21",
+    "exports": [
+      ".",
+      "./client",
+      "./server",
+      "./v2",
+      "./v2/client",
+      "./v2/gen/client",
+      "./v2/server"
+    ]
+  },
+  "evidence": {
+    "packageJson": "@opencode-ai/sdk/package.json",
+    "clientImpl": "@opencode-ai/sdk/dist/v2/client.js",
+    "types": "@opencode-ai/sdk/dist/v2/gen/types.gen.d.ts"
+  },
+  "bridgeExpectations": {
+    "createClientImport": "@opencode-ai/sdk/v2",
+    "sessionPathKey": "sessionID",
+    "globalHealthPath": "/global/health",
+    "directoryHeader": "x-opencode-directory"
+  }
+}

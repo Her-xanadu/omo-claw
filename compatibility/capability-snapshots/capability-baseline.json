@@ -1,0 +1,60 @@
+{
+  "capturedAt": "2026-03-08T12:49:28.921Z",
+  "opencodeVersion": "1.2.21",
+  "omoVersion": "3.0.0",
+  "sdkNamespace": "v2",
+  "tools": {
+    "ids": [],
+    "mcpServers": [
+      "peekaboo",
+      "github",
+      "xiaohongshu"
+    ]
+  },
+  "commands": {
+    "list": [],
+    "aliases": {}
+  },
+  "agents": {
+    "configs": []
+  },
+  "events": {
+    "supportedSet": [
+      "session.created",
+      "message.updated",
+      "message.part.updated",
+      "message.part.delta",
+      "message.part.removed",
+      "todo.updated",
+      "permission.asked",
+      "permission.replied",
+      "session.compacted"
+    ]
+  },
+  "permissions": {
+    "flow": "prompt-user",
+    "toolRestrictions": {}
+  },
+  "plugins": {
+    "hooks": [
+      "chat.message",
+      "chat.params",
+      "chat.headers",
+      "permission.ask",
+      "command.execute.before",
+      "tool.execute.before",
+      "shell.env",
+      "tool.execute.after",
+      "experimental.chat.messages.transform",
+      "experimental.chat.system.transform",
+      "experimental.session.compacting",
+      "experimental.text.complete",
+      "tool.definition"
+    ]
+  },
+  "evidence": {
+    "sdkPackage": "@opencode-ai/sdk/package.json",
+    "pluginTypes": "@opencode-ai/plugin/dist/index.d.ts",
+    "omoPackage": "oh-my-opencode/package.json"
+  }
+}

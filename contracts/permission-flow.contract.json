@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "contract": "permission-flow",
+  "version": 1,
+  "sdkCapabilities": {
+    "events": [
+      "permission.asked",
+      "permission.replied"
+    ],
+    "sessionScopedReplyEndpoint": "/session/{sessionID}/permissions/{permissionID}",
+    "globalReplyEndpoint": "/permission/{requestID}/reply",
+    "pendingListEndpoint": "/permission",
+    "replyShapes": {
+      "sessionScoped": {
+        "field": "response",
+        "values": [
+          "once",
+          "always",
+          "reject"
+        ]
+      },
+      "global": {
+        "field": "reply",
+        "values": [
+          "once",
+          "always",
+          "reject"
+        ]
+      }
+    }
+  },
+  "bridgeRules": {
+    "headlessApprovalLoop": true,
+    "defaultTimeoutMs": 120000,
+    "fallbackReply": "reject",
+    "requiredCorrelationFields": [
+      "sessionID",
+      "permissionID or requestID",
+      "tool.messageID",
+      "tool.callID"
+    ]
+  },
+  "evidence": {
+    "sdkTypes": "@opencode-ai/sdk/dist/v2/gen/types.gen.d.ts",
+    "sdkClient": "@opencode-ai/sdk/dist/v2/gen/sdk.gen.d.ts",
+    "officialDocs": "https://opencode.ai/docs/server/"
+  },
+  "knownDrift": {
+    "docsVsSdk": "Official prose may describe allow/deny semantics, but SDK v2 types freeze wire values to once/always/reject. Bridge follows SDK wire contract."
+  }
+}

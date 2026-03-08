@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.openclaw.local/opencode.bridge.schema.json",
+  "title": "OpenClaw Opencode Bridge Config",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "runtime",
+    "bridge",
+    "policy"
+  ],
+  "properties": {
+    "runtime": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "port",
+        "hostname",
+        "configPath",
+        "configDir",
+        "xdg"
+      ],
+      "properties": {
+        "port": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 65535,
+          "default": 19222
+        },
+        "hostname": {
+          "type": "string",
+          "default": "127.0.0.1"
+        },
+        "configPath": {
+          "type": "string"
+        },
+        "configDir": {
+          "type": "string"
+        },
+        "xdg": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "configHome",
+            "dataHome",
+            "stateHome"
+          ],
+          "properties": {
+            "configHome": { "type": "string" },
+            "dataHome": { "type": "string" },
+            "stateHome": { "type": "string" }
+          }
+        }
+      }
+    },
+    "bridge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sdkNamespace",
+        "serverBaseUrl",
+        "directoryHeader",
+        "auth"
+      ],
+      "properties": {
+        "sdkNamespace": {
+          "type": "string",
+          "enum": ["v1", "v2"]
+        },
+        "serverBaseUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "directoryHeader": {
+          "type": "string",
+          "const": "x-opencode-directory"
+        },
+        "auth": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "mode",
+            "secretFile"
+          ],
+          "properties": {
+            "mode": {
+              "type": "string",
+              "const": "basic"
+            },
+            "secretFile": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "todoSync",
+        "permissionFlow"
+      ],
+      "properties": {
+        "todoSync": {
+          "type": "string",
+          "const": "omo-to-openclaw"
+        },
+        "permissionFlow": {
+          "type": "string",
+          "enum": ["auto-approve", "prompt-user", "deny-all"]
+        }
+      }
+    }
+  }
+}

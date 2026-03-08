@@ -1,0 +1,14 @@
+{
+  "type": "todo.updated",
+  "properties": {
+    "threadID": "thread-golden",
+    "sessionID": "ses_golden",
+    "todos": [
+      {
+        "content": "ship bridge",
+        "status": "in_progress",
+        "priority": "high"
+      }
+    ]
+  }
+}

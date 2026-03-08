@@ -1,0 +1,27 @@
+{
+  "$schema": "./opencode.bridge.schema.json",
+  "runtime": {
+    "port": 19222,
+    "hostname": "127.0.0.1",
+    "configPath": "./integration/bridge-runtime/opencode.bridge.json",
+    "configDir": "./integration/bridge-runtime/.opencode",
+    "xdg": {
+      "configHome": "./integration/bridge-runtime/xdg/config",
+      "dataHome": "./integration/bridge-runtime/xdg/data",
+      "stateHome": "./integration/bridge-runtime/xdg/state"
+    }
+  },
+  "bridge": {
+    "sdkNamespace": "v2",
+    "serverBaseUrl": "http://127.0.0.1:19222",
+    "directoryHeader": "x-opencode-directory",
+    "auth": {
+      "mode": "basic",
+      "secretFile": "./integration/bridge-runtime/.bridge-secret"
+    }
+  },
+  "policy": {
+    "todoSync": "omo-to-openclaw",
+    "permissionFlow": "prompt-user"
+  }
+}
