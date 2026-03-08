@@ -1,7 +1,7 @@
 # omo claw
 
 <p align="center">
-  <img src="./docs/assets/readme-banner.png" alt="omo claw 横幅" width="100%" />
+  <img src="./docs/assets/readme-banner.png" alt="omo claw 横幅" width="960" />
 </p>
 
 <p align="center">
@@ -23,6 +23,42 @@
 
 `omo claw` 用来把 **OpenClaw 线程**接到一个**隔离的 Headless OpenCode + OmO 运行时**上。它不是简单的 SDK 调用包装，而是把 runtime、route、permission、todo、summary、replay、compatibility 这几层都收拢到一个桥接插件里。
 
+## 安装
+
+### 让 agent 直接帮你装
+
+想要安装 `omo claw`，告诉你的 OpenCode 或 OpenClaw agent：
+
+```text
+请安装并配置 omo claw，严格按照这里的说明执行：
+https://raw.githubusercontent.com/Her-xanadu/omo-claw/main/docs/guide/install.zh-CN.md
+```
+
+### Homebrew（macOS）
+
+```bash
+brew tap Her-xanadu/omo-claw https://github.com/Her-xanadu/omo-claw
+brew install --HEAD omo-claw
+omo-claw-install /path/to/your/openclaw/plugins/omo-claw
+```
+
+### npm（基于 GitHub 仓库）
+
+```bash
+npm install -g github:Her-xanadu/omo-claw
+omo-claw-install /path/to/your/openclaw/plugins/omo-claw
+```
+
+### Git / 源码方式
+
+```bash
+git clone https://github.com/Her-xanadu/omo-claw.git
+cd omo-claw
+./scripts/setup-local.sh
+```
+
+`omo-claw-install` 会自动克隆仓库、执行本地初始化，然后提示剩余的 OpenClaw 注册步骤。
+
 ---
 
 ## 这个项目解决什么问题
@@ -41,7 +77,7 @@
 ## 架构概览
 
 <p align="center">
-  <img src="./docs/assets/architecture.png" alt="omo claw 架构图" width="100%" />
+  <img src="./docs/assets/architecture.png" alt="omo claw 架构图" width="960" />
 </p>
 
 ### 核心分层
@@ -114,16 +150,13 @@
 - OpenClaw 已经能从你的插件工作区加载插件
 - 端口 `19222` 没有被占用
 
-> 这个仓库不是 Homebrew 风格的一条命令 GUI 工具，而是一个 OpenClaw 插件项目，外加一个受控的 runtime bridge。
+> Homebrew 和 npm 可以作为安装入口，但这个仓库本质上仍然是一个 OpenClaw 插件项目，加上一层受控的 runtime bridge。
 
 ---
 
-## 快速开始
+## 安装后启动
 
 ```bash
-git clone https://github.com/Her-xanadu/omo-claw.git
-cd omo-claw
-./scripts/setup-local.sh
 ./integration/bridge-runtime/bridge-launcher.sh
 ./tests/live/runtime-health.smoke.sh
 ```
@@ -183,6 +216,8 @@ bun run compile:definitions
 | `compatibility/` | snapshot、diff classifier、adapter registry |
 | `contracts/` | 机器可校验合同 |
 | `tests/` | 单测、合同测试、e2e、smoke |
+| `Formula/` | Homebrew 安装器 formula |
+| `docs/guide/` | 面向 agent 的安装说明 |
 | `docs/assets/` | README 视觉素材 |
 
 ---
@@ -198,11 +233,20 @@ bun run compile:definitions
 
 ## 相关文档
 
+- [Agent 安装说明](./docs/guide/install.zh-CN.md)
+- [Agent install guide](./docs/guide/install.md)
 - [English README](./README.md)
 - [运维说明](./OPERATIONS.md)
 - [发布说明](./PUBLISHING.md)
 - [贡献指南](./CONTRIBUTING.md)
 - [安全策略](./SECURITY.md)
+
+---
+
+## Contributors
+
+- [OpenClaw](https://github.com/OpenClaw/openclaw) 提供插件宿主与 context-engine 接入面
+- [OpenCode](https://opencode.ai/) 提供本桥接层依赖的 SDK / runtime 模型
 
 ---
 
