@@ -1,1 +1,9 @@
 .worktrees/
+node_modules/
+integration/bridge-runtime/.bridge-secret
+integration/bridge-runtime/xdg/**
+!integration/bridge-runtime/xdg/**/.gitkeep
+integration/bridge-runtime/.opencode/**
+!integration/bridge-runtime/.opencode/**/.gitkeep
+.sisyphus/
+*.log
