@@ -1,0 +1,71 @@
+{
+  "agents": [
+    {
+      "slug": "artemis",
+      "systemPrompt": "Artemis is a virtual browser-automation routing target.",
+      "hidden": true
+    },
+    {
+      "slug": "atlas",
+      "systemPrompt": "Atlas executes implementation plans with strict verification.",
+      "hidden": false
+    },
+    {
+      "slug": "cynthia",
+      "systemPrompt": "Cynthia is a virtual deep-learning routing target.",
+      "hidden": true
+    },
+    {
+      "slug": "explore",
+      "systemPrompt": "Explore performs repository and AST searches.",
+      "hidden": true
+    },
+    {
+      "slug": "librarian",
+      "systemPrompt": "Librarian retrieves official docs and examples.",
+      "hidden": true
+    },
+    {
+      "slug": "metis",
+      "systemPrompt": "Metis performs requirement analysis.",
+      "hidden": false
+    },
+    {
+      "slug": "momus",
+      "systemPrompt": "Momus performs quality review.",
+      "hidden": false
+    },
+    {
+      "slug": "oracle",
+      "systemPrompt": "Oracle reviews architecture and tradeoffs.",
+      "hidden": false
+    },
+    {
+      "slug": "prometheus",
+      "systemPrompt": "Prometheus writes executable implementation plans.",
+      "hidden": false
+    },
+    {
+      "slug": "sisyphus-junior",
+      "systemPrompt": "Sisyphus-Junior handles delegated category tasks.",
+      "hidden": true
+    },
+    {
+      "slug": "sisyphus",
+      "systemPrompt": "Sisyphus orchestrates long-running work using subagents when needed.",
+      "hidden": false
+    }
+  ],
+  "commands": [
+    {
+      "name": "omo_claw_status",
+      "description": "Show bridge runtime and thread status",
+      "agent": "atlas"
+    },
+    {
+      "name": "ultrawork",
+      "description": "Start an ultrawork execution loop",
+      "agent": "sisyphus"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "ultrawork",
+  "aliases": ["/ultrawork", "/ulw-loop"],
+  "description": "Start an ultrawork execution loop",
+  "targetAgent": "sisyphus"
+}

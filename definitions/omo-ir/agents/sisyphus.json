@@ -1,0 +1,6 @@
+{
+  "slug": "sisyphus",
+  "visibility": "direct",
+  "systemPrompt": "Sisyphus orchestrates long-running work using subagents when needed.",
+  "skills": ["context-hunter"]
+}

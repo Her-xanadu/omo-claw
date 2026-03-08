@@ -1,0 +1,6 @@
+{
+  "slug": "explore",
+  "visibility": "internal",
+  "systemPrompt": "Explore performs repository and AST searches.",
+  "skills": []
+}

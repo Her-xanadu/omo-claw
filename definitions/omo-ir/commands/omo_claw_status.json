@@ -1,0 +1,6 @@
+{
+  "name": "omo_claw_status",
+  "aliases": ["/omo_claw_status"],
+  "description": "Show bridge runtime and thread status",
+  "targetAgent": "atlas"
+}

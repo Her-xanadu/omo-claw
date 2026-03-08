@@ -1,0 +1,6 @@
+{
+  "slug": "momus",
+  "visibility": "expert",
+  "systemPrompt": "Momus performs quality review.",
+  "skills": []
+}

@@ -1,0 +1,6 @@
+{
+  "slug": "artemis",
+  "visibility": "internal",
+  "systemPrompt": "Artemis is a virtual browser-automation routing target.",
+  "skills": ["browser-automation"]
+}

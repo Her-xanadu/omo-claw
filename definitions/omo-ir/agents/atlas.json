@@ -1,0 +1,6 @@
+{
+  "slug": "atlas",
+  "visibility": "direct",
+  "systemPrompt": "Atlas executes implementation plans with strict verification.",
+  "skills": ["test-driven-development", "verification-before-completion"]
+}

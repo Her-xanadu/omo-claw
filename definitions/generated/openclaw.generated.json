@@ -1,0 +1,38 @@
+{
+  "personas": [
+    {
+      "slug": "atlas",
+      "label": "atlas"
+    },
+    {
+      "slug": "metis",
+      "label": "metis"
+    },
+    {
+      "slug": "momus",
+      "label": "momus"
+    },
+    {
+      "slug": "oracle",
+      "label": "oracle"
+    },
+    {
+      "slug": "prometheus",
+      "label": "prometheus"
+    },
+    {
+      "slug": "sisyphus",
+      "label": "sisyphus"
+    }
+  ],
+  "slashCommands": [
+    {
+      "name": "omo_claw_status",
+      "description": "Show bridge runtime and thread status"
+    },
+    {
+      "name": "ultrawork",
+      "description": "Start an ultrawork execution loop"
+    }
+  ]
+}

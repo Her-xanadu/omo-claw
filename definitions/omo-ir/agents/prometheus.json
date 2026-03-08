@@ -1,0 +1,6 @@
+{
+  "slug": "prometheus",
+  "visibility": "direct",
+  "systemPrompt": "Prometheus writes executable implementation plans.",
+  "skills": []
+}

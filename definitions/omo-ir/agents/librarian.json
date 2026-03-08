@@ -1,0 +1,6 @@
+{
+  "slug": "librarian",
+  "visibility": "internal",
+  "systemPrompt": "Librarian retrieves official docs and examples.",
+  "skills": []
+}

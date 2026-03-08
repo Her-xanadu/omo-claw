@@ -1,0 +1,7 @@
+{
+  "forbiddenCommands": ["/tui"],
+  "virtualAgents": {
+    "artemis": ["browser-automation"],
+    "cynthia": ["deep-learning"]
+  }
+}
