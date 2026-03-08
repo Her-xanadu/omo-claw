@@ -1,7 +1,7 @@
 # omo claw
 
 <p align="center">
-  <img src="./docs/assets/readme-banner.svg" alt="omo claw banner" width="100%" />
+  <img src="./docs/assets/readme-banner.png" alt="omo claw banner" width="100%" />
 </p>
 
 <p align="center">
@@ -41,7 +41,7 @@ This makes it useful both as a **real plugin** and as a **reference implementati
 ## Architecture at a glance
 
 <p align="center">
-  <img src="./docs/assets/architecture.svg" alt="omo claw architecture" width="100%" />
+  <img src="./docs/assets/architecture.png" alt="omo claw architecture" width="100%" />
 </p>
 
 ### Core layers
@@ -89,6 +89,30 @@ Before using `omo claw`, make sure you have:
 - `opencode` CLI available in PATH (or at `~/.opencode/bin/opencode`)
 - an OpenClaw installation that supports context-engine plugins
 - permission to run a local headless service on `127.0.0.1:19222`
+
+### Supported operating systems
+
+| OS | Status | Notes |
+| --- | --- | --- |
+| macOS | ✅ primary tested platform | recommended environment |
+| Linux | ⚠️ partially supported | only if your OpenClaw + OpenCode stack already works |
+| Windows | ❌ not documented | use at your own risk / not currently supported |
+
+### Required software
+
+| Requirement | Why it is needed |
+| --- | --- |
+| Bun | install dependencies and run the TypeScript project scripts |
+| OpenCode CLI (`opencode`) | starts the isolated headless runtime |
+| OpenClaw | hosts the plugin / context-engine |
+| Local filesystem access | stores runtime config, state, and generated definitions |
+
+### Before you run setup
+
+- confirm `bun --version` works
+- confirm `opencode --help` works, or `~/.opencode/bin/opencode` exists
+- confirm OpenClaw can load plugins from your plugin workspace
+- confirm port `19222` is available
 
 > This repository is **not** a standalone Homebrew-style desktop app. It is an OpenClaw plugin project with a managed runtime bridge.
 
