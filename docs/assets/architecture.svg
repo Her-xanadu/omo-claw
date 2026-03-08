@@ -8,11 +8,11 @@
 
   <rect x="72" y="170" width="336" height="480" rx="28" fill="#111827" stroke="#38BDF8" stroke-width="2"/>
   <text x="240" y="228" fill="#7DD3FC" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" text-anchor="middle">OpenClaw</text>
-  <text x="240" y="268" fill="#E5E7EB" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">Plugin host & user entry</text>
+  <text x="240" y="268" fill="#E5E7EB" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">Plugin host &amp; user entry</text>
   <text x="112" y="338" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• context-engine registration</text>
   <text x="112" y="382" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• gateway method: omo-claw.status</text>
   <text x="112" y="426" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• slash command: omo_claw_status</text>
-  <text x="112" y="470" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• thread binding & session status</text>
+  <text x="112" y="470" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• thread binding &amp; session status</text>
   <text x="112" y="514" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• plugin workspace integration</text>
 
   <rect x="472" y="140" width="336" height="540" rx="28" fill="#111827" stroke="#A78BFA" stroke-width="2"/>
@@ -24,15 +24,15 @@
   <text x="510" y="436" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• EventBridge / EventReducer</text>
   <text x="510" y="480" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• SummaryCache / TodoSync / Replay</text>
   <text x="510" y="524" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• CapabilityService / mode switching</text>
-  <text x="510" y="568" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• Definition compiler & generated manifests</text>
+  <text x="510" y="568" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• Definition compiler &amp; generated manifests</text>
 
   <rect x="872" y="170" width="336" height="480" rx="28" fill="#111827" stroke="#60A5FA" stroke-width="2"/>
   <text x="1040" y="228" fill="#BFDBFE" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" text-anchor="middle">Headless OpenCode + OmO</text>
   <text x="1040" y="268" fill="#E5E7EB" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">Isolated execution runtime</text>
   <text x="912" y="338" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• opencode serve :19222</text>
   <text x="912" y="382" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• XDG-isolated config / data / state</text>
-  <text x="912" y="426" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• OmO agents & virtual routing</text>
-  <text x="912" y="470" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• Basic Auth & permission replies</text>
+  <text x="912" y="426" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• OmO agents &amp; virtual routing</text>
+  <text x="912" y="470" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• Basic Auth &amp; permission replies</text>
   <text x="912" y="514" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20">• SSE events, compaction, todo flow</text>
 
   <line x1="408" y1="412" x2="472" y2="412" stroke="#38BDF8" stroke-width="6" stroke-linecap="round"/>

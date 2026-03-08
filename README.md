@@ -1,7 +1,7 @@
 # omo claw
 
 <p align="center">
-  <img src="./docs/assets/readme-banner.svg" alt="omo claw banner" width="100%" />
+  <img src="./docs/assets/readme-banner.png" alt="omo claw banner" width="960" />
 </p>
 
 <p align="center">
@@ -23,6 +23,42 @@
 
 `omo claw` connects **OpenClaw threads** to an **isolated headless OpenCode + OmO runtime**. It gives you a clean plugin entrypoint, a controlled bridge layer, replay-aware event reduction, permission flow management, and compatibility-aware operation without depending on ACP.
 
+## Install
+
+### Ask an agent to do it
+
+Tell your OpenCode or OpenClaw agent:
+
+```text
+Install and configure omo claw by following the instructions here:
+https://raw.githubusercontent.com/Her-xanadu/omo-claw/main/docs/guide/install.md
+```
+
+### Homebrew (macOS)
+
+```bash
+brew tap Her-xanadu/omo-claw https://github.com/Her-xanadu/omo-claw
+brew install --HEAD omo-claw
+omo-claw-install /path/to/your/openclaw/plugins/omo-claw
+```
+
+### npm (GitHub-backed)
+
+```bash
+npm install -g github:Her-xanadu/omo-claw
+omo-claw-install /path/to/your/openclaw/plugins/omo-claw
+```
+
+### Git / source checkout
+
+```bash
+git clone https://github.com/Her-xanadu/omo-claw.git
+cd omo-claw
+./scripts/setup-local.sh
+```
+
+`omo-claw-install` clones the repository, runs local setup, and then prints the remaining OpenClaw registration steps.
+
 ---
 
 ## Why this project exists
@@ -41,7 +77,7 @@ This makes it useful both as a **real plugin** and as a **reference implementati
 ## Architecture at a glance
 
 <p align="center">
-  <img src="./docs/assets/architecture.svg" alt="omo claw architecture" width="100%" />
+  <img src="./docs/assets/architecture.png" alt="omo claw architecture" width="960" />
 </p>
 
 ### Core layers
@@ -90,16 +126,37 @@ Before using `omo claw`, make sure you have:
 - an OpenClaw installation that supports context-engine plugins
 - permission to run a local headless service on `127.0.0.1:19222`
 
-> This repository is **not** a standalone Homebrew-style desktop app. It is an OpenClaw plugin project with a managed runtime bridge.
+### Supported operating systems
+
+| OS | Status | Notes |
+| --- | --- | --- |
+| macOS | ✅ primary tested platform | recommended environment |
+| Linux | ⚠️ partially supported | only if your OpenClaw + OpenCode stack already works |
+| Windows | ❌ not documented | use at your own risk / not currently supported |
+
+### Required software
+
+| Requirement | Why it is needed |
+| --- | --- |
+| Bun | install dependencies and run the TypeScript project scripts |
+| OpenCode CLI (`opencode`) | starts the isolated headless runtime |
+| OpenClaw | hosts the plugin / context-engine |
+| Local filesystem access | stores runtime config, state, and generated definitions |
+
+### Before you run setup
+
+- confirm `bun --version` works
+- confirm `opencode --help` works, or `~/.opencode/bin/opencode` exists
+- confirm OpenClaw can load plugins from your plugin workspace
+- confirm port `19222` is available
+
+> Homebrew and npm can bootstrap installation, but this repository is still an OpenClaw plugin project with a managed runtime bridge.
 
 ---
 
-## Quick start
+## Run after install
 
 ```bash
-git clone https://github.com/Her-xanadu/omo-claw.git
-cd omo-claw
-./scripts/setup-local.sh
 ./integration/bridge-runtime/bridge-launcher.sh
 ./tests/live/runtime-health.smoke.sh
 ```
@@ -159,6 +216,8 @@ bun run compile:definitions
 | `compatibility/` | snapshots, diff classifier, adapter registry |
 | `contracts/` | machine-checkable bridge contracts |
 | `tests/` | unit, contract, e2e, smoke verification |
+| `Formula/` | Homebrew formula for the installer wrapper |
+| `docs/guide/` | agent-friendly install guides |
 | `docs/assets/` | README visual assets |
 
 ---
@@ -174,11 +233,20 @@ bun run compile:definitions
 
 ## Documentation
 
+- [Agent install guide](./docs/guide/install.md)
+- [中文安装说明](./docs/guide/install.zh-CN.md)
 - [中文说明 / README.zh-CN.md](./README.zh-CN.md)
 - [Operations](./OPERATIONS.md)
 - [Publishing](./PUBLISHING.md)
 - [Contributing](./CONTRIBUTING.md)
 - [Security](./SECURITY.md)
+
+---
+
+## Contributors
+
+- [OpenClaw](https://github.com/OpenClaw/openclaw) for the plugin host and context-engine surface
+- [OpenCode](https://opencode.ai/) for the SDK/runtime model that powers the bridge
 
 ---
 

@@ -1,10 +1,20 @@
 {
   "name": "omo-claw",
+  "version": "0.1.0",
+  "description": "SDK-only OpenClaw plugin and context-engine bridge for OpenCode + OmO",
   "private": true,
   "type": "module",
+  "bin": {
+    "omo-claw-install": "./scripts/install-plugin.sh"
+  },
   "exports": {
     ".": "./src/index.ts"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Her-xanadu/omo-claw.git"
+  },
+  "license": "MIT",
   "scripts": {
     "compile:definitions": "bun run definitions/compiler/cli.ts",
     "test": "bun test",
